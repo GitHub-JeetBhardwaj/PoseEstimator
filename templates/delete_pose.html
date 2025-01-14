@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Pose</title>
+    <style>
+        body {
+            color: #ffffff;
+            font-family: __Cabin_2f0af6, __Cabin_Fallback_2f0af6;
+            padding: 0%;
+            margin: 0%;
+            background-color: #ffffff;
+            /* Light gray fallback */
+            background-image: url("static/images/Wave.jpeg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    
+        nav {
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            padding: 4px;
+            gap: 25px;
+            color: #f0f0f0;
+            background-image: linear-gradient(to right, #3b3b3b,#8b8b8b );
+        }
+        nav div a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        nav img {
+            height: 20px;
+        }
+    
+        nav div {
+            font-size: 17px;
+            padding: 2px;
+            border-radius: 3px;
+            padding: 3px;
+            cursor: pointer;
+        }
+    
+        nav div:hover {
+            background-color: #2b2a2a;
+        }
+    section{
+        font-size: 40px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .content{
+        font-size: 22px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .content :nth-child(1){
+        font-size: 20px;
+    }
+    .content :nth-child(2){
+        font-size: 15px;
+        color: #ffffff;
+        border-radius: 4px;
+        border: 2px solid #a8a8a8;
+        background-color: #474747;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    }
+    .content :nth-child(3){
+        font-size: 15px;
+        /* padding: 3px; */
+        border-radius: 10px;
+        color: #ffffff;
+        border: 2px solid #b3b3b3;
+        background-color: #474747;
+        cursor: pointer;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    }
+    .content button:hover{
+        border-radius: 10px;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        background-color: #272727;
+        cursor: pointer;
+    }
+    .bottom {
+        margin-bottom: 20px;
+        margin-top: 40px;
+        text-align: center;
+        text-decoration: none;
+    }
+    .bottom a{
+        color: #ffffff;
+    }
+    .bottom a:hover{
+        color: #c0c0c0;
+    }
+    .images{
+        margin-top: 50px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding:20px;
+        grid-template-columns: repeat(3,200px);
+    }
+    .images img{
+        border-radius: 5px;
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+        object-position: center;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    }
+    @media screen and (max-width: 793px) {
+        .images{
+            margin-top: 50px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding:20px;
+            grid-template-columns: repeat(1,200px);
+        }
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="static/images/f1.jpeg" alt="my image">|
+        <div><a href="/">Home</a></div>
+        <div><a href="/contacts">Contacts</a></div>
+        <div><a href="/about">About</a></div>
+    </nav>
+
+    <section>Delete a Custom Pose</section>
+    
+    <div class="content">
+    <form method="post">
+        <label for="pose_name">Pose Name:</label>
+        <select id="pose_name" name="pose_name" required>
+            {% for pose in poses %}
+                <option value="{{ pose }}">{{ pose }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Delete Pose</button>
+    </form>
+    </div>
+
+    <div class="images">
+        <!-- <img src="static/images/pose5.png" alt=""> -->
+        <img src="static/images/pg1 (2).png" alt="">
+        <img src="static/images/pg1 (3).png" alt="">
+        <img src="static/images/pg1 (4).png" alt="">
+    </div>
+
+    <div class="bottom">
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>

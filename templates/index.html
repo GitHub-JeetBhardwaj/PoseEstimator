@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoseEstimator</title>
+</head>
+<style>
+    body {
+        font-family: __Cabin_2f0af6, __Cabin_Fallback_2f0af6;
+        padding: 0%;
+        margin: 0%;
+        background-color: #ffffff;
+        /* Light gray fallback */
+        background-image: url("static/images/Wave.jpeg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    nav {
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        padding: 4px;
+        gap: 25px;
+        color: #f0f0f0;
+        background-image: linear-gradient(to right, #3b3b3b,#8b8b8b );
+    }
+    nav div a{
+        color: #ffffff;
+        text-decoration: none;
+    }
+    nav img {
+        height: 20px;
+    }
+
+    nav div {
+        font-size: 17px;
+        padding: 2px;
+        border-radius: 3px;
+        padding: 3px;
+        cursor: pointer;
+    }
+
+    nav div:hover {
+        background-color: #2b2a2a;
+    }
+
+    section {
+        margin-bottom: 80px;
+        text-align: center;
+        color: whitesmoke;
+        font-family: __Cabin_2f0af6, __Cabin_Fallback_2f0af6;
+        animation: dots 2s cubic-bezier(0.01, 0.01, 0.02, 0.02) 0s 1;
+
+    }
+
+    section :nth-child(1) {
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+    section :nth-child(2) {
+        font-size: 40px;
+    }
+
+    .grid {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(3, 250px);
+        gap: 70px;
+    }
+
+    .grid div {
+        text-align: center;
+        margin: 5px;
+        height: 200px;
+        padding: 10px;
+        width: 200px;
+    }
+
+    .grid div img {
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+    }
+    .grid div img:hover{
+        transform: translateX(5px) translateY(-5px);
+    }
+    .grid div a {
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 20px;
+        color: #ffff;
+        font-family: __Cabin_2f0af6, __Cabin_Fallback_2f0af6;
+    }
+
+    .bottom {
+        color: #ffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 120px;
+        margin-bottom: 20px;
+    }
+
+    .bottom img {
+        height: 20px;
+        border-radius: 20px;
+    }
+
+    @keyframes dots {
+        from {
+            color: #000000;
+        }
+
+        to {
+
+            color: whitesmoke;
+        }
+    }
+    @media screen and (max-width: 793px) {
+        .grid {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(1, 200px);
+        gap: 70px;
+    }
+    }
+</style>
+
+<body>
+    <nav>
+        <img src="static/images/f1.jpeg" alt="my image">|
+        <div><a href="/">Home</a></div>
+        <div><a href="/contacts">Contacts</a></div>
+        <div><a href="/about">About</a></div>
+    </nav>
+    <section> <span>Welcome to</span><span> PoseEstimator</span></section>
+
+    <div class="grid">
+        <div><a href="{{ url_for('add_pose') }}"><img src="static/images/pg (4).png" alt="">Add a
+                Pose</a></div>
+        <div><a href="{{ url_for('delete_pose') }}"><img src="static/images/h1.png" alt="">Delete an Existing
+                Pose</a></div>
+        <div><a href="{{ url_for('detect_pose') }}"><img src="static/images/h2.png" alt="">Detect Pose Through Live
+                Camera</a></div>
+
+    </div>
+    
+    <div class="bottom">
+        <a href="https://www.linkedin.com/in/jeet-bhardwaj-b726712b0/"><img src="static/images/Profile.png" alt="my image"></a>
+
+        <span>| Created by Jeet Bhardwaj</span>
+    </div>
+</body>
+
+</html>
+<div></div>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pose Detection</title>
+    <style>
+        body {
+            color: #ffffff;
+            font-family: __Cabin_2f0af6, __Cabin_Fallback_2f0af6;
+            padding: 0%;
+            margin: 0%;
+            background-color: #ffffff;
+            /* Light gray fallback */
+            background-image: url("static/images/Wave.jpeg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    
+        nav {
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            padding: 4px;
+            gap: 25px;
+            color: #f0f0f0;
+            background-image: linear-gradient(to right, #3b3b3b,#8b8b8b );
+        }
+        nav div a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        nav img {
+            height: 20px;
+        }
+    
+        nav div {
+            font-size: 17px;
+            padding: 2px;
+            border-radius: 3px;
+            padding: 3px;
+            cursor: pointer;
+        }
+    
+        nav div:hover {
+            background-color: #2b2a2a;
+        }
+        section{
+            font-size: 40px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        p{
+            text-align: center;
+            font-size: 30px;
+        }
+        .bottom {
+            margin-bottom: 20px;
+            margin-top: 25px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .bottom a{
+            color: #ffffff;
+        }
+        .bottom a:hover{
+            color: #c0c0c0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="static/images/f1.jpeg" alt="my image">|
+        <div><a href="/">Home</a></div>
+        <div><a href="/contacts">Contacts</a></div>
+        <div><a href="/about">About</a></div>
+    </nav>
+
+    <section>Pose Detection Results</section>
+
+    {% if pose_name %}
+    <p>Detected Pose: {{ pose_name }}</p>
+    {% else %}
+    <p>No pose detected yet.</p>
+    {% endif %}
+    <div class="bottom">
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pose Detection</title>
+    <style>
+        body {
+            color: #ffffff;
+            font-family: __Cabin_2f0af6, __Cabin_Fallback_2f0af6;
+            padding: 0%;
+            margin: 0%;
+            background-color: #ffffff;
+            /* Light gray fallback */
+            background-image: url("static/images/Wave.jpeg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            padding: 4px;
+            gap: 25px;
+            color: #f0f0f0;
+            background-image: linear-gradient(to right, #3b3b3b, #8b8b8b);
+        }
+
+        nav div a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        nav img {
+            height: 20px;
+        }
+
+        nav div {
+            font-size: 17px;
+            padding: 2px;
+            border-radius: 3px;
+            padding: 3px;
+            cursor: pointer;
+        }
+
+        nav div:hover {
+            background-color: #2b2a2a;
+        }
+
+        section {
+            font-size: 40px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .bottom {
+            margin-top: 250px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .bottom a {
+            color: #ffffff;
+        }
+
+        .bottom a:hover {
+            color: #c0c0c0;
+        }
+
+        .Profile {
+            font-size: 20px;
+            color: #ffff;
+            text-align: center;
+            gap: 10px;
+            margin-top: 120px;
+        }
+
+        .Profile img {
+            height: 20px;
+            border-radius: 20px;
+        }
+
+        .Profile a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #ffffff;
+            text-align: justify;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 80vw;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 2rem;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background-color: #636363;
+            color: #ffffff;
+            padding: 1rem 0;
+        }
+
+        footer p {
+            margin: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img src="static/images/f1.jpeg" alt="my image">|
+        <div><a href="/">Home</a></div>
+        <div><a href="/contacts">Contacts</a></div>
+        <div><a href="/about">About</a></div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1 class="text-center">About Us</h1>
+            <p class="mt-4">
+                Welcome to <strong>Pose Detection System</strong>, a user-friendly platform designed to simplify human
+                pose detection and management. Our application provides an intuitive interface to interact with pose
+                detection technology, allowing users to add, delete, and recognize human poses in real-time.
+            </p>
+            <hr>
+            <h2>Our Features</h2>
+            <ul>
+                <li><strong>Add a Custom Pose:</strong> Save your own unique poses by capturing live frames from your
+                    camera and storing the pose details for future recognition.</li>
+                <li><strong>Delete Existing Poses:</strong> Manage your custom poses effortlessly by deleting poses you
+                    no longer need.</li>
+                <li><strong>Live Pose Detection:</strong> Detect and identify human poses in real-time using advanced
+                    computer vision algorithms powered by MediaPipe and OpenCV.</li>
+            </ul>
+            <hr>
+            <h2>Technology Stack</h2>
+            <ul>
+                <li><strong>Backend:</strong> Built using Python and Flask for efficient server-side processing.</li>
+                <li><strong>Computer Vision:</strong> MediaPipe Pose Estimation and OpenCV for robust pose detection.
+                </li>
+                <li><strong>Frontend:</strong> HTML, CSS for a modern and responsive interface.</li>
+            </ul>
+            <hr>
+            <h2>Developer</h2>
+            <p>
+                This application was developed by <strong>Jeet Bhardwaj</strong>, a passionate programmer with a keen
+                interest in artificial intelligence and computer vision. The project demonstrates the integration of
+                advanced AI techniques with real-world usability.
+            </p>
+            <hr>
+            <h2>Vision</h2>
+            <p>
+                Our goal is to make pose detection technology accessible and easy to use for everyone. Whether you're a
+                fitness enthusiast, a developer, or just curious about computer vision, this platform is built for you!
+            </p>
+
+            <p class="text-center mt-5">Feel free to explore the features, experiment with poses, and discover the
+                exciting possibilities of pose detection technology!</p>
+
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p>&copy; 2025 Jeet Bhardwaj. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
