@@ -34,7 +34,7 @@ Welcome to the **Pose Detection Web App** built using Python, OpenCV, MediaPipe,
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/pose-detection-web-app.git
+   git clone https://github.com/GitHub-JeetBhardwaj/PoseEstimator.git
    cd pose-detection-web-app
    ```
 
