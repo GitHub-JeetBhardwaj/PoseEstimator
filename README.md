@@ -63,13 +63,13 @@ The app has the following web pages:
 
 Here are some screenshots of the app in action:
 
-![Preview 1](https://github.com/GitHub-JeetBhardwaj/pose-detection-web-app/blob/main/Assets/p1.png)
-![Preview 2](https://github.com/GitHub-JeetBhardwaj/pose-detection-web-app/blob/main/Assets/p2.png)
-![Preview 3](https://github.com/GitHub-JeetBhardwaj/pose-detection-web-app/blob/main/Assets/p3.png)
-![Preview 4](https://github.com/GitHub-JeetBhardwaj/pose-detection-web-app/blob/main/Assets/p4.png)
-![Preview 5](https://github.com/GitHub-JeetBhardwaj/pose-detection-web-app/blob/main/Assets/p5.png)
-![Preview 6](https://github.com/GitHub-JeetBhardwaj/pose-detection-web-app/blob/main/Assets/p6.png)
-![Preview 7](https://github.com/GitHub-JeetBhardwaj/pose-detection-web-app/blob/main/Assets/p7.png)
+![Preview 1](https://github.com/GitHub-JeetBhardwaj/PoseEstimator/blob/main/Assets/p1.png)
+![Preview 2](https://github.com/GitHub-JeetBhardwaj/PoseEstimator/blob/main/Assets/p2.png)
+![Preview 3](https://github.com/GitHub-JeetBhardwaj/PoseEstimator/blob/main/Assets/p3.png)
+![Preview 4](https://github.com/GitHub-JeetBhardwaj/PoseEstimator/blob/main/Assets/p4.png)
+![Preview 5](https://github.com/GitHub-JeetBhardwaj/PoseEstimator/blob/main/Assets/p5.png)
+![Preview 6](https://github.com/GitHub-JeetBhardwaj/PoseEstimator/blob/main/Assets/p6.png)
+![Preview 7](https://github.com/GitHub-JeetBhardwaj/PoseEstimator/blob/main/Assets/p7.png)
 
 ## Technologies Used
 
