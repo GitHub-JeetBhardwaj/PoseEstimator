@@ -63,13 +63,13 @@ The app has the following web pages:
 
 Here are some screenshots of the app in action:
 
-![Preview 1](https://github.com/yourusername/pose-detection-web-app/blob/main/Assets/preview1.jpg)
-![Preview 2](https://github.com/yourusername/pose-detection-web-app/blob/main/Assets/preview2.jpg)
-![Preview 3](https://github.com/yourusername/pose-detection-web-app/blob/main/Assets/preview3.jpg)
-![Preview 4](https://github.com/yourusername/pose-detection-web-app/blob/main/Assets/preview4.jpg)
-![Preview 5](https://github.com/yourusername/pose-detection-web-app/blob/main/Assets/preview5.jpg)
-![Preview 6](https://github.com/yourusername/pose-detection-web-app/blob/main/Assets/preview6.jpg)
-![Preview 7](https://github.com/yourusername/pose-detection-web-app/blob/main/Assets/preview7.jpg)
+![Preview 1](https://github.com/yourusername/pose-detection-web-app/blob/main/Assets/p1.png)
+![Preview 2](https://github.com/yourusername/pose-detection-web-app/blob/main/Assets/p2.png)
+![Preview 3](https://github.com/yourusername/pose-detection-web-app/blob/main/Assets/p3.png)
+![Preview 4](https://github.com/yourusername/pose-detection-web-app/blob/main/Assets/p4.png)
+![Preview 5](https://github.com/yourusername/pose-detection-web-app/blob/main/Assets/p5.png)
+![Preview 6](https://github.com/yourusername/pose-detection-web-app/blob/main/Assets/p6.png)
+![Preview 7](https://github.com/yourusername/pose-detection-web-app/blob/main/Assets/p7.png)
 
 ## Technologies Used
 
