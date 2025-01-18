@@ -35,20 +35,21 @@ Welcome to the **Pose Detection Web App** built using Python, OpenCV, MediaPipe,
 1. Clone the repository:
    ```bash
    git clone https://github.com/GitHub-JeetBhardwaj/PoseEstimator.git
-   cd pose-detection-web-app
    ```
 
-2. Install dependencies:
+2. Go to that directory
+   
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Run the Flask app:
+4. Run the Flask app:
    ```bash
    python app.py
    ```
 
-4. Open your browser and go to `http://127.0.0.1:5000/` to access the web interface.
+5. Open your browser and go to `http://127.0.0.1:5000/` to access the web interface.
 
 ## Web Interface
 
