@@ -18,17 +18,13 @@ POSES_FILE = "custom_poses.json"
 
 # Load custom poses from the file if it exists
 def load_custom_poses():
-    """
-    Load custom poses from the JSON file. 
-    If the file is empty or has invalid JSON, return an empty dictionary.
-    """
     if os.path.exists(POSES_FILE):
         try:
             with open(POSES_FILE, "r") as file:
                 return json.load(file)
         except json.JSONDecodeError:
             print(f"Error: The file {POSES_FILE} is empty or contains invalid JSON.")
-            return {}  # Return an empty dictionary if JSON is invalid
+            return {}
     return {}
 
 # Save custom poses to the file
@@ -72,7 +68,7 @@ def extract_joint_angles(landmarks, h, w):
     """
     keypoints = [(int(landmark.x * w), int(landmark.y * h)) for landmark in landmarks]
     
-    # Define key angles (shoulder, elbow, knee, etc.)
+    # Define key angles (shoulder, elbow, knee, hip, neck, etc.)
     angles = {
         "left_elbow": calculate_angle(keypoints[mp_pose.PoseLandmark.LEFT_SHOULDER.value],
                                       keypoints[mp_pose.PoseLandmark.LEFT_ELBOW.value],
@@ -86,6 +82,15 @@ def extract_joint_angles(landmarks, h, w):
         "right_knee": calculate_angle(keypoints[mp_pose.PoseLandmark.RIGHT_HIP.value],
                                       keypoints[mp_pose.PoseLandmark.RIGHT_KNEE.value],
                                       keypoints[mp_pose.PoseLandmark.RIGHT_ANKLE.value]),
+        "neck_angle": calculate_angle(keypoints[mp_pose.PoseLandmark.NOSE.value],
+                                      keypoints[mp_pose.PoseLandmark.LEFT_SHOULDER.value],
+                                      keypoints[mp_pose.PoseLandmark.LEFT_ELBOW.value]),  # Neck angle with shoulder
+        "left_hip_angle": calculate_angle(keypoints[mp_pose.PoseLandmark.LEFT_SHOULDER.value],
+                                          keypoints[mp_pose.PoseLandmark.LEFT_HIP.value],
+                                          keypoints[mp_pose.PoseLandmark.LEFT_KNEE.value]),
+        "right_hip_angle": calculate_angle(keypoints[mp_pose.PoseLandmark.RIGHT_SHOULDER.value],
+                                           keypoints[mp_pose.PoseLandmark.RIGHT_HIP.value],
+                                           keypoints[mp_pose.PoseLandmark.RIGHT_KNEE.value]),
     }
     return angles
 
@@ -117,7 +122,6 @@ def add_custom_pose_from_live_frame(pose_name):
         if not ret:
             break
 
-        #frame = cv2.flip(frame, 1)  # Flip the frame horizontally for a mirrored effect
         h, w, _ = frame.shape
         rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         result = pose.process(rgb_frame)
@@ -130,7 +134,7 @@ def add_custom_pose_from_live_frame(pose_name):
         cv2.imshow("Pose Detection - Press 'c' to capture", frame)
 
         key = cv2.waitKey(1) & 0xFF
-        if key == ord('c'):  # When 'c' is pressed, capture the pose
+        if key == ord('c') or key==ord('C'):  # When 'c' is pressed, capture the pose
             # Extract joint angles
             current_angles = extract_joint_angles(result.pose_landmarks.landmark, h, w)
 
@@ -140,7 +144,7 @@ def add_custom_pose_from_live_frame(pose_name):
             print(f"Pose '{pose_name}' added successfully.")
             break  # Exit after adding the pose
 
-        elif key == ord('q'):  # Press 'q' to quit the program
+        elif key == ord('q') or key==ord('Q'):  # Press 'q' to quit the program
             break
 
     cap.release()
@@ -177,7 +181,6 @@ def delete_pose():
 
 @app.route('/detect_pose', methods=['GET'])
 def detect_pose():
-    # Start video capture for live pose detection
     cap = cv2.VideoCapture(0)
     pose_name = None  # Variable to store the pose name
 
@@ -186,7 +189,6 @@ def detect_pose():
         if not ret:
             break
 
-        #frame = cv2.flip(frame, 1)  # Flip the frame horizontally for a mirrored effect
         h, w, _ = frame.shape
         rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         result = pose.process(rgb_frame)
@@ -207,14 +209,13 @@ def detect_pose():
 
         # Check if the user clicked the cross (closed the window)
         key = cv2.waitKey(1) & 0xFF
-        if key == ord('q') or cv2.getWindowProperty("Pose Detection", cv2.WND_PROP_VISIBLE) < 1:
+        if key == ord('q') or key == ord('Q') or cv2.getWindowProperty("Pose Detection", cv2.WND_PROP_VISIBLE) < 1:
             break  # Exit the loop if 'q' is pressed or the window is closed
 
-    # Ensure proper cleanup after closing the window
     cap.release()
     cv2.destroyAllWindows()
 
-    return render_template('detect_pose.html', pose_name=pose_name)  # Send pose name to the template
+    return render_template('detect_pose.html', pose_name=pose_name)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',debug=True)
+    app.run(host='0.0.0.0', debug=True)
