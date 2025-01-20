@@ -132,6 +132,7 @@ def add_custom_pose_from_live_frame(pose_name):
 
         # Display the live frame
         cv2.imshow("Pose Detection - Press 'c' to capture", frame)
+        cv2.setWindowProperty("Pose Detection - Press 'c' to capture",cv2.WND_PROP_TOPMOST,1)
 
         key = cv2.waitKey(1) & 0xFF
         if key == ord('c') or key==ord('C'):  # When 'c' is pressed, capture the pose
@@ -206,7 +207,7 @@ def detect_pose():
 
         # Show live video with pose detection
         cv2.imshow("Pose Detection", frame)
-
+        cv2.setWindowProperty("Pose Detection",cv2.WND_PROP_TOPMOST,1)
         # Check if the user clicked the cross (closed the window)
         key = cv2.waitKey(1) & 0xFF
         if key == ord('q') or key == ord('Q') or cv2.getWindowProperty("Pose Detection", cv2.WND_PROP_VISIBLE) < 1:
