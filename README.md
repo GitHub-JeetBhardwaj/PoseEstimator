@@ -68,9 +68,11 @@ Here are some screenshots of the app in action:
 ![Preview 2](https://github.com/GitHub-JeetBhardwaj/PoseEstimator/blob/main/Assets/p2.png)
 ![Preview 3](https://github.com/GitHub-JeetBhardwaj/PoseEstimator/blob/main/Assets/p3.png)
 ![Preview 4](https://github.com/GitHub-JeetBhardwaj/PoseEstimator/blob/main/Assets/p4.png)
-![Preview 5](https://github.com/GitHub-JeetBhardwaj/PoseEstimator/blob/main/Assets/p5.png)
-![Preview 6](https://github.com/GitHub-JeetBhardwaj/PoseEstimator/blob/main/Assets/p6.png)
-![Preview 7](https://github.com/GitHub-JeetBhardwaj/PoseEstimator/blob/main/Assets/p7.png)
+![Preview 5](https://github.com/GitHub-JeetBhardwaj/PoseEstimator/blob/main/Assets/p6.png)
+![Preview 6](https://github.com/GitHub-JeetBhardwaj/PoseEstimator/blob/main/Assets/p7.png)
+![Preview 7](https://github.com/GitHub-JeetBhardwaj/PoseEstimator/blob/main/Assets/p8.png)
+![Preview 7](https://github.com/GitHub-JeetBhardwaj/PoseEstimator/blob/main/Assets/p9.png)
+![Preview 7](https://github.com/GitHub-JeetBhardwaj/PoseEstimator/blob/main/Assets/p10.png)
 
 ## Technologies Used
 
